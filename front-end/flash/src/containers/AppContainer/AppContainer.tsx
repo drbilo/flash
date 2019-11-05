@@ -52,15 +52,7 @@ export class AppContainer extends Component<Props, State> {
         <div
           className={`message-container background ${data.level.toLocaleLowerCase()}`}
         >
-          <div className={`animated icon-animation-1 ${this.state.isAnimateFinished ? 'hidden' : ''}`}>
-            <div className="animated icon-animation-2">
-              <div className="animated icon-animation-3">
-                <img src={alert_icon} alt="" />
-              </div>
-            </div>
-          </div>
-
-          <div className="message animated message-animation">
+          <div className="message">
             {data.message}
           </div>
         </div>
