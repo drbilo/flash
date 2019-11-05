@@ -1,0 +1,20 @@
+{
+  "name": "e2e",
+  "private": true,
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^4.0.3",
+    "@types/node": "^10.12.18",
+    "cypress": "3.1.5",
+    "cypress-testing-library": "2.3.5",
+    "eslint-plugin-cypress": "^2.2.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.4"
+  }
+}

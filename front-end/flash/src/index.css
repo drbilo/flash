@@ -1,0 +1,26 @@
+/**
+  * NB
+  * - Only place global styles here. Styles for individual components should live in each component's folder.
+  * - normalize.css is first imported via NPM in index.ts
+  */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; /* i.e. 1rem */
+}
+
+body {
+  font-family: Lato, "sans-serif", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
