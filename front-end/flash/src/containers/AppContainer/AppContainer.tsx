@@ -5,14 +5,31 @@ import alert_icon from "../../img/bullhorn_black.svg";
 interface Props {
   sc?: ScreenCloud;
 }
+interface State {
+  isAnimateFinished: boolean
+}
 const data = {
-  level: "EMERGENCY",
-  message: "NEW PROMOTION IS COMING",
+  level: "WARNING",
+  message: "Fire Drill 10 Minutes",
   duration: 10000
 };
 
-export class AppContainer extends Component<Props> {
+interface CommandResult {
+  level: string
+  duration: number
+  message: string
+}
+
+
+export class AppContainer extends Component<Props, State> {
+  constructor(props: Props){
+    super(props)
+    this.state = {
+      isAnimateFinished: false
+    }
+  }
   componentDidMount() {
+    this.setDisplayNone()
     this.countingflashEnd();
   }
 
@@ -23,13 +40,11 @@ export class AppContainer extends Component<Props> {
     }, data.duration);
   };
 
-  renderMessage = () => {
-    return (
-      <div className={`message-container ${data.level.toLocaleLowerCase()}`}>
-        <div className="message">{data.message}</div>
-      </div>
-    );
-  };
+  setDisplayNone = () => {
+    setTimeout(() => {
+      this.setState({ isAnimateFinished: true })
+    }, 4000);
+  }
 
   render(): ReactNode {
     return (
@@ -37,7 +52,7 @@ export class AppContainer extends Component<Props> {
         <div
           className={`message-container background ${data.level.toLocaleLowerCase()}`}
         >
-          <div className="animated icon-animation-1">
+          <div className={`animated icon-animation-1 ${this.state.isAnimateFinished ? 'hidden' : ''}`}>
             <div className="animated icon-animation-2">
               <div className="animated icon-animation-3">
                 <img src={alert_icon} alt="" />
