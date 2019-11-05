@@ -14,7 +14,7 @@ app.command("/flash", async ({ command, ack, say }) => {
   const message = command.text;
   const commandComponents = parseFlashCommand(command.text);
 
-  say(`Here's the message to broadcast: "${commandComponents.message}" of duration ${commandComponents.duration} seconds with type ${commandComponents.level}`);
+  say(`⚡️Here's the message to broadcast: "${commandComponents.message}" \n ⚡️Duration: ${commandComponents.duration} seconds \n ⚡️ Type: ${commandComponents.level}`);
 });
 
 
@@ -22,7 +22,7 @@ app.command("/flash", async ({ command, ack, say }) => {
   // Start the app
   await app.start(process.env.PORT || 3000);
 
-  console.log('⚡️ Bolt app is running!');
+  console.log('⚡️ Flash app is running!');
 })();
 
 
