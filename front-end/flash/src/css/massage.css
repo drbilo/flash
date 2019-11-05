@@ -16,12 +16,15 @@
     letter-spacing: -1px;
   }
   .info {
-    background-color: #e6e56c;
+      background-color: #5eb7b7;
   }
   .warning {
     background-color: red;
 
   }
   .win {
-    background-color: #fec771;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    
+    /* background-color: #fec771; */
   }
