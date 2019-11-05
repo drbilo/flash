@@ -4,6 +4,7 @@ import "whatwg-fetch"; // required until cypress supports fetch API. https://git
 import "normalize.css"; // Import before any custom CSS. Smoothes out browser differences.
 import "./css/custom.css";
 import "./css/animate.css";
+import "./css/massage.css"
 
 import { AppContainer } from "./containers/AppContainer/AppContainer";
 import ScreenCloudReactApp from "./ScreenCloudReactApp";
