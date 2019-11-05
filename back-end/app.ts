@@ -1,5 +1,6 @@
 require('dotenv').config()
 const { App } = require('@slack/bolt');
+const { parseFlashCommand } = require("./parseFlashCommand");
 
 const app = new App({
   signingSecret: process.env.SLACK_SIGNING_SECRET,
@@ -10,8 +11,9 @@ const app = new App({
 app.command("/flash", async ({ command, ack, say }) => {
   // Acknowledge command request
   ack();
-  let message = command.text;
-  let commandComponents = command.text.split("\"");
+  const message = command.text;
+  const commandComponents = parseFlashCommand(command);
+
   say(`Here's the message to broadcast: ${message}`);
 });
 
