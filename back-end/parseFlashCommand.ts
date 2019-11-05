@@ -8,7 +8,7 @@
 // the command order is expected to be of the space-separated form:
 //
 // -> level duration message
-function parseFlashCommand(commandString): CommandResult {
+function parseFlashCommand(commandString) {
   const messageStart = commandString.indexOf('"');
   const defaultDuration = 1; // minute
   const defaultLevel = "info";
