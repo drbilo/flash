@@ -1,7 +1,7 @@
 require("dotenv").config();
 const { App } = require("@slack/bolt");
 const { parseFlashCommand } = require("./parseFlashCommand");
-import { request } from "graphql-request";
+import { graphQLClient } from "graphql-request";
 
 const allScreensQuery = `
     query {
