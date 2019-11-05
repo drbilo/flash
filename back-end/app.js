@@ -50,7 +50,11 @@ app.command("/flash", async ({ command, ack, say }) => {
     const linkId = '';
     const priority = 10;
 
-    request('studio.screencloud.com/graphql', castLinkMutation, castLinkInput(screenIds, teamId, linkId, priority))
+    // graphql library method, try?
+    request('https://graphql.eu.screencloud.com/graphql',
+            castLinkMutation,
+            castLinkInput(screenIds, teamId, linkId, priority)
+           )
         .then(data => console.log(data))
         .catch(e => console.log(e));
 
