@@ -15,7 +15,8 @@
     "@slack/bolt": "1.4.1",
     "@types/jest": "^24.0.21",
     "dotenv": "^8.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "graphql-request": "^1.8.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.0",
