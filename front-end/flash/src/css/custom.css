@@ -1,0 +1,27 @@
+.icon-animation-1 {
+     animation: bounceIn 1s;
+    display: flex;
+ }
+.icon-animation-2 {
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    display: flex;
+}
+.icon-animation-3 {
+    animation-name: bounceOut;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    display: flex;
+}
+.app-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.background {
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+}
