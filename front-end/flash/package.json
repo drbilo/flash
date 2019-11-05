@@ -1,0 +1,52 @@
+{
+  "name": "flash",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@screencloud/signage-sdk": "1.3.6",
+    "micro": "9.3.3",
+    "micro-cors": "0.1.1",
+    "normalize.css": "8.0.1",
+    "react": "16.8.0",
+    "react-dom": "16.8.0",
+    "react-scripts": "2.1.5",
+    "typescript": "3.2.2",
+    "whatwg-fetch": "3.0.0"
+  },
+  "scripts": {
+    "postinstall": "cd e2e && yarn",
+    "start": "react-scripts start",
+    "start:mocks": "micro-dev -p 3006",
+    "build": "SC_ENV=${DEPLOY_TARGET:=production} yarn run build:run",
+    "build:run": "echo \"Build for env: ${SC_ENV}\"; sh -ac '. ./.env.${SC_ENV}; react-scripts build'",
+    "serve:build": "serve -s ./build/ --listen 3000",
+    "test": "react-scripts test",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cy:open",
+    "test:e2e:ci": "start-server-and-test serve:build http://localhost:3000 cy:run",
+    "lint": "prettier --check --no-config 'src/**/*.{ts,tsx,js,jsx,html,css,sass,less,json,yml,md,graphql}' && eslint 'src/**/*.{ts,tsx,js,jsx}'",
+    "lint:fix": "prettier --write --no-config 'src/**/*.{ts,tsx,js,jsx,html,css,sass,less,json,yml,md,graphql}' && eslint --fix 'src/**/*.{ts,tsx,js,jsx}'",
+    "eject": "react-scripts eject",
+    "cy:open": "cd e2e && yarn run cy:open",
+    "cy:run": "cd e2e && yarn run cy:run"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/jest": "23.3.12",
+    "@types/node": "10.12.18",
+    "@types/react": "16.8.0",
+    "@types/react-dom": "16.0.11",
+    "@typescript-eslint/eslint-plugin": "1.3.0",
+    "@typescript-eslint/parser": "1.3.0",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "micro-dev": "3.0.0",
+    "prettier": "1.16.4",
+    "serve": "10.1.2",
+    "start-server-and-test": "1.7.11"
+  }
+}

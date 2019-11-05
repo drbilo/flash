@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "types": ["cypress", "node", "../cypress-testing-library/typings"],
+    "module": "commonjs",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "es5",
+    "lib": ["dom", "es6"],
+    "jsx": "react",
+    "experimentalDecorators": true
+  },
+
+  "include": [
+    // Specs
+    "cypress/*/*.ts"
+  ]
+}
