@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "whatwg-fetch"; // required until cypress supports fetch API. https://github.com/cypress-io/cypress/issues/95
 import "normalize.css"; // Import before any custom CSS. Smoothes out browser differences.
+import "./css/custom.css";
+import "./css/animate.css";
 
 import { AppContainer } from "./containers/AppContainer/AppContainer";
 import ScreenCloudReactApp from "./ScreenCloudReactApp";
