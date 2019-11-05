@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "./build/app.js",
   "scripts": {
-    "build": "tsc app.ts",
-    "start": "npm run build && node ./app.js",
+    "start": "node ./app.js",
     "test": "jest"
   },
   "author": "",
