@@ -6,10 +6,11 @@ interface Props {
   sc?: ScreenCloud;
 }
 const data = {
-  level: "EMERGENCY",
-  message: "NEW PROMOTION IS COMING",
+  level: "WARNING",
+  message: "Fire Drill 10 Minutes",
   duration: 10000
 };
+
 
 export class AppContainer extends Component<Props> {
   componentDidMount() {

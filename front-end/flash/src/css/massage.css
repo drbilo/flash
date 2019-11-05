@@ -7,18 +7,21 @@
     justify-content: center;
   }
   .message {
-    background-color: wheat;
-    font-size: 3.5vw;
-    border: 2px dashed white;
-    border-radius: 16px;
-    padding: 0.5em 16px;
+    text-align: center;
+    color: white;
+    font-size: 10vw;
+    padding: 0.5em 0px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -1px;
   }
-  .information {
+  .info {
     background-color: #e6e56c;
   }
   .warning {
-    background-color: #fec771;
+    background-color: red;
+
   }
-  .emergency {
-    background-color: #eb7070;
+  .win {
+    background-color: #fec771;
   }
